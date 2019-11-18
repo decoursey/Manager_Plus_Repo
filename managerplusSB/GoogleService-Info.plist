@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>499298413022-4va3sll8n18vep2bvfnj0tlank7ifeci.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.499298413022-4va3sll8n18vep2bvfnj0tlank7ifeci</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLfWFU_2sh3Xo6JbKub7NxO_4GileVZJM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>499298413022</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.managerplusxcode.managerplusSB</string>
+	<key>PROJECT_ID</key>
+	<string>manger-plus</string>
+	<key>STORAGE_BUCKET</key>
+	<string>manger-plus.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:499298413022:ios:e27ced32dbdbefdfda954f</string>
+	<key>DATABASE_URL</key>
+	<string>https://manger-plus.firebaseio.com</string>
+</dict>
+</plist>
