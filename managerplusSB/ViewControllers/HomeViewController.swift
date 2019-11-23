@@ -7,26 +7,48 @@
 //
 
 import UIKit
+import FSCalendar
 
-import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    fileprivate weak var calendar: FSCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        // In loadView or viewDidLoad
+        let calendar = FSCalendar()
+        //calendar.dataSource = self
+        //calendar.delegate = self
+        calendar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calendar)
+        calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
 
-        // Do any additional setup after loading the view.
+        
+        calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        calendar.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
+        calendar.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        self.calendar = calendar
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
+//extension HomeViewController: FSCalendarDataSource, FSCalendarDelegate {
+    
+//}
