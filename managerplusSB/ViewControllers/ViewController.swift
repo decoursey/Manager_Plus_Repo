@@ -9,6 +9,9 @@ import FSCalendar
 import UIKit
 import AVKit
 
+struct EventDetails: Decodable{
+    let name: String
+}
 class ViewController: UIViewController {
 
     var videoPlayer:AVPlayer?
@@ -22,8 +25,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         setUpElements()
+    let jsonURLString = "https://campusevents.uncc.edu/api/2/events"
+    guard let url = URL(string: jsonURLString) else
+    { return }
+    
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+        
+            guard let data = data else { return }
+            
+            let dataAsString = String(data: data, encoding: .utf8)
+            //print(dataAsString)
+            
+            do {
+                let eventD = try
+                    JSONDecoder().decode(EventDetails.self, from: data)
+                print(eventD.name)
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+    }.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +88,8 @@ class ViewController: UIViewController {
         
         // Add it to the view and play it
         videoPlayer?.playImmediately(atRate: 0.3)
+    
+        
     }
 
 
