@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="1779.7101449275365" y="137.94642857142856"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="dM7-4L-qSy">
             <objects>
                 <viewController id="72s-PG-TW2" customClass="LoginViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hMw-ND-MlE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="P6H-Sc-oZY"/>
+                    <navigationItem key="navigationItem" title="Login" id="P6H-Sc-oZY"/>
                     <connections>
                         <outlet property="emailTextField" destination="SWp-RT-UkL" id="vbi-ur-Pps"/>
                         <outlet property="errorLabel" destination="wD0-HW-y4H" id="IlP-qb-5Vx"/>
@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="2618.840579710145" y="600"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign Up -->
         <scene sceneID="ioA-3a-JBF">
             <objects>
                 <viewController id="d6N-6J-6Tx" customClass="SignUpViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -207,7 +207,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iQ3-Nl-HVC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Wb-gm-8Ma"/>
+                    <navigationItem key="navigationItem" title="Sign Up " id="2Wb-gm-8Ma"/>
                     <connections>
                         <outlet property="emailTextField" destination="81q-Jb-UAI" id="FN7-Rg-SYV"/>
                         <outlet property="errorLabel" destination="I9u-Ag-Dxq" id="b2w-mh-zFI"/>
@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="2618.840579710145" y="-99.107142857142847"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Calendar-->
         <scene sceneID="wDc-Jp-zVI">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="MJ4-kS-XxA" customClass="HomeViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -246,18 +246,73 @@
                                 <rect key="frame" x="66" y="107" width="93" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Remindar"/>
+                                <connections>
+                                    <segue destination="NMI-VA-MYc" kind="show" id="xrr-ZL-x1p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Pya-hN-kNE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YPN-Od-U6J"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="YPN-Od-U6J"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX7-dn-cHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3426.0869565217395" y="269.19642857142856"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Reminder-->
+        <scene sceneID="5pW-Vk-uhQ">
+            <objects>
+                <viewController id="KgN-vN-5IR" customClass="AddReminderViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wsN-c4-Ydx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you want to remember?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-Xv-4eH">
+                                <rect key="frame" x="20" y="88" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vra-Rm-kYG">
+                                <rect key="frame" x="0.0" y="130" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="tt6-YJ-Vd8"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ea-Xv-4eH" firstAttribute="leading" secondItem="4Zq-ZC-DYf" secondAttribute="leading" constant="20" id="3qc-Ud-bAf"/>
+                            <constraint firstItem="6Ea-Xv-4eH" firstAttribute="top" secondItem="4Zq-ZC-DYf" secondAttribute="top" id="4uj-qi-AJ6"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="leading" secondItem="4Zq-ZC-DYf" secondAttribute="leading" id="CLx-c7-Y1s"/>
+                            <constraint firstItem="4Zq-ZC-DYf" firstAttribute="trailing" secondItem="6Ea-Xv-4eH" secondAttribute="trailing" constant="20" id="VZC-S9-cmk"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="top" secondItem="6Ea-Xv-4eH" secondAttribute="bottom" constant="8" id="YW7-zq-BUi"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="trailing" secondItem="4Zq-ZC-DYf" secondAttribute="trailing" id="gxm-th-A9b"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="top" secondItem="6Ea-Xv-4eH" secondAttribute="bottom" constant="8" id="w1g-v4-m4r"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="leading" secondItem="4Zq-ZC-DYf" secondAttribute="leading" id="xRt-zm-J8t"/>
+                            <constraint firstItem="vra-Rm-kYG" firstAttribute="centerX" secondItem="6Ea-Xv-4eH" secondAttribute="centerX" id="zTu-Ut-HKt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Zq-ZC-DYf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Reminder" id="G3b-c5-sll">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wgs-BZ-UM2">
+                            <connections>
+                                <segue destination="UTk-Qm-rWO" kind="unwind" unwindAction="unwindToReminderListWithSender:" id="73S-s9-MIK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="reminderTextField" destination="6Ea-Xv-4eH" id="zDP-iq-0mw"/>
+                        <outlet property="saveButton" destination="wgs-BZ-UM2" id="IVc-Jl-2ng"/>
+                        <outlet property="timePicker" destination="vra-Rm-kYG" id="PSP-an-I99"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxs-Q5-R8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UTk-Qm-rWO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8197.1014492753638" y="764.73214285714278"/>
+        </scene>
+        <!--To-Do List-->
         <scene sceneID="fRz-mC-FP5">
             <objects>
                 <viewController id="Ixp-79-y5A" customClass="TableViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -309,7 +364,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cIC-5n-XyR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8v0-xH-R0r">
+                    <navigationItem key="navigationItem" title="To-Do List" id="8v0-xH-R0r">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cbI-0E-jSM">
                             <connections>
                                 <segue destination="D8w-bs-ogu" kind="show" id="ODZ-y7-CdG"/>
@@ -324,7 +379,7 @@
             </objects>
             <point key="canvasLocation" x="5085.507246376812" y="-289.28571428571428"/>
         </scene>
-        <!--Add Task Controller-->
+        <!--Add task -->
         <scene sceneID="VF7-5I-z0S">
             <objects>
                 <viewController id="D8w-bs-ogu" customClass="AddTaskController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -357,7 +412,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="L9P-NO-hSP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6eZ-Z5-u1u"/>
+                    <navigationItem key="navigationItem" title="Add task " id="6eZ-Z5-u1u"/>
                     <connections>
                         <outlet property="taskNameOutlet" destination="Jr0-f4-6Ln" id="DEL-3z-PJj"/>
                     </connections>
@@ -401,6 +456,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUn-gk-uHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="137.94642857142856"/>
+        </scene>
+        <!--Reminder Table View Controller-->
+        <scene sceneID="plq-ZO-FhO">
+            <objects>
+                <tableViewController id="NMI-VA-MYc" customClass="ReminderTableViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="213-9W-Sec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reminderCell" textLabel="3mO-UH-yi0" detailTextLabel="kN7-Vp-los" style="IBUITableViewCellStyleSubtitle" id="8jL-z2-DJB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8jL-z2-DJB" id="0qW-d1-P9R">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3mO-UH-yi0">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kN7-Vp-los">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NMI-VA-MYc" id="S0c-MY-6SB"/>
+                            <outlet property="delegate" destination="NMI-VA-MYc" id="mbw-ko-IdI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HHu-vT-zdw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eZr-Rl-FYg">
+                            <connections>
+                                <segue destination="KgN-vN-5IR" kind="show" id="KbS-EC-0WN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07O-9i-cce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5721" y="761"/>
         </scene>
     </scenes>
     <resources>
