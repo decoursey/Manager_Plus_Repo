@@ -9,43 +9,65 @@ import FSCalendar
 import UIKit
 import AVKit
 
-struct EventDetails: Decodable{
-    let name: String
-}
-class ViewController: UIViewController {
 
-    var videoPlayer:AVPlayer?
-    
-    var videoPlayerLayer:AVPlayerLayer?
-    
-    @IBOutlet weak var signUpButton: UIButton!
-    
-    @IBOutlet weak var loginButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        setUpElements()
-    let jsonURLString = "https://campusevents.uncc.edu/api/2/events"
-    guard let url = URL(string: jsonURLString) else
-    { return }
-    
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-        
-            guard let data = data else { return }
-            
-            let dataAsString = String(data: data, encoding: .utf8)
-            //print(dataAsString)
-            
-            do {
-                let eventD = try
-                    JSONDecoder().decode(EventDetails.self, from: data)
-                print(eventD.name)
-            } catch let jsonErr {
-                print("Error serializing json:", jsonErr)
-            }
-    }.resume()
+class ViewController: UIViewController {
+    struct eventData: Codable{
+        let stuff: Events
     }
+
+    struct Events: Codable{
+        let events: EventCont
+        //let time:
+    }
+
+
+
+
+    struct EventCont: Codable{
+        let title: String?
+        let location_name: String?
+    }
+
+
+
+
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view.
+
+            func stringToDate(date: String){
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+                dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+                let dateFromString = dateFormatter.date(from: date)
+            }
+
+            let jsonURLString = "https://campusevents.uncc.edu/api/2/events"
+            guard let url = URL(string: jsonURLString) else
+            { return }
+
+            URLSession.shared.dataTask(with: url) { (data, response, err) in
+
+                guard let data = data else { return }
+
+                //let dataAsString = String(data: data, encoding: .utf8)
+                //print(dataAsString)
+
+
+                do {
+                    let eventName = try
+                        JSONDecoder().decode(eventData.self, from: data)
+                    //maybe name
+                    print(eventName)
+                } catch let jsonErr {
+                    print("Error serializing json:", jsonErr)
+                }
+
+                }.resume()
+        }
+
+
     
     override func viewWillAppear(_ animated: Bool) {
         
