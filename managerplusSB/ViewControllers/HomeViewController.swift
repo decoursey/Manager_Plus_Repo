@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         
         calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         calendar.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
-        calendar.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        calendar.heightAnchor.constraint(equalToConstant: 600).isActive = true
         self.calendar = calendar
         
         

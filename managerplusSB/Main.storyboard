@@ -245,7 +245,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tn-YA-6zQ">
                                 <rect key="frame" x="66" y="107" width="93" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Remindar"/>
+                                <state key="normal" title="Reminder"/>
                                 <connections>
                                     <segue destination="NMI-VA-MYc" kind="show" id="xrr-ZL-x1p"/>
                                 </connections>
@@ -457,7 +457,7 @@
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="137.94642857142856"/>
         </scene>
-        <!--Reminder Table View Controller-->
+        <!--Reminder-->
         <scene sceneID="plq-ZO-FhO">
             <objects>
                 <tableViewController id="NMI-VA-MYc" customClass="ReminderTableViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
@@ -496,7 +496,7 @@
                             <outlet property="delegate" destination="NMI-VA-MYc" id="mbw-ko-IdI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="HHu-vT-zdw">
+                    <navigationItem key="navigationItem" title="Reminder" id="HHu-vT-zdw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eZr-Rl-FYg">
                             <connections>
                                 <segue destination="KgN-vN-5IR" kind="show" id="KbS-EC-0WN"/>
@@ -510,7 +510,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Header" width="400" height="86"/>
+        <image name="Header" width="488" height="179"/>
         <image name="checkBoxOUTLINE " width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
