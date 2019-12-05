@@ -240,7 +240,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkU-VU-Tde">
                                 <rect key="frame" x="157" y="107" width="93" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calendar"/>
+                                <state key="normal" title="Events"/>
+                                <connections>
+                                    <segue destination="8Vi-jS-8dt" kind="show" id="hMa-e3-jgp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tn-YA-6zQ">
                                 <rect key="frame" x="66" y="107" width="93" height="52"/>
@@ -258,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX7-dn-cHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3426.0869565217395" y="269.19642857142856"/>
+            <point key="canvasLocation" x="3793" y="245"/>
         </scene>
         <!--Add Reminder-->
         <scene sceneID="5pW-Vk-uhQ">
@@ -456,6 +459,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUn-gk-uHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="137.94642857142856"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="xMJ-kK-FN8">
+            <objects>
+                <viewController id="8Vi-jS-8dt" customClass="EventsViewController" customModule="managerplusSB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j08-H4-77d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nRH-Xs-tuB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="mqx-e8-Cnv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="InU-34-q67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="1191"/>
         </scene>
         <!--Reminder-->
         <scene sceneID="plq-ZO-FhO">
