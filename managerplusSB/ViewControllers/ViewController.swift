@@ -10,6 +10,14 @@ import UIKit
 import AVKit
 import Alamofire
 import SwiftyJSON
+/*
+protocol ourFunctions {
+    func getTitle(num: Int)
+    func getLocation(num: Int)
+}
+*/
+
+
 
 
 class ViewController: UIViewController {
@@ -22,9 +30,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    /*func displayEventVC() {
+       let vc = EventsViewController()
+       vc.delegate = self
+       self.present(vc, animated: true)
+    }
     
-    
-    
+  
    struct Events: Decodable{
         let events: EventDetails
         //let events: Dictionary<String, String>
@@ -54,19 +66,19 @@ class ViewController: UIViewController {
 
 
 
-
+*/
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
 
-            func stringToDate(date: String){
+            /*func stringToDate(date: String){
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
                 dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
-                _ = dateFormatter.date(from: date)
+               _ = dateFormatter.date(from: date) */
             }
 
-            let jsonURLString = "https://campusevents.uncc.edu/api/2/events"
+            /*let jsonURLString = "https://campusevents.uncc.edu/api/2/events"
             guard let url = URL(string: jsonURLString) else
             { return }
 
@@ -77,13 +89,45 @@ class ViewController: UIViewController {
                     let events = data["events"].arrayValue
                     
                     var eventData: JSON?
-                    var eventTitle: String?
+                    //var eventTitle: String?
                     
+                
+                    
+                    func getTitle(num: Int)-> String{
+                    var eventTitles: [String] = []
+                        self.removeFromSuperView()
                     for event in events {
                         eventData = event["event"]
-                        eventTitle = eventData?["title"].stringValue
-                        print(eventTitle!)
+                        eventTitles.append(((eventData?["title"].stringValue)!))
+                        
                     }
+                        return eventTitles[num]
+                    }
+                    
+                    
+                    func getLocation(num: Int)-> String{
+                        var eventLoc: [String] = []
+                        for event in events {
+                        eventData = event["event"]
+                        eventLoc.append(((eventData?["location_name"].stringValue)!))
+                        
+                    }
+                        return eventLoc[num]
+                    }
+                
+                  
+                   func getDate(num: Int)-> String{
+                       var eventDate: [String] = []
+                       for event in events {
+                        eventData = event["event"]
+                       eventInst = eventData["event_instance"]
+                       eventDate.append(((eventInst?["location_name"].stringValue)!))
+                       
+                   }
+                       return eventInst[num]
+                   }
+                    
+                    
                     
                     
                     
@@ -116,5 +160,5 @@ class ViewController: UIViewController {
 
 
 
-
+*/
 }

@@ -13,5 +13,8 @@ target 'managerplusSB' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'FSCalendar'
+	pod 'Alamofire', '~> 4.8'
+	pod 'SwiftyJSON', '~> 4.0'
+	pod 'KVKCalendar'
 	
 end
