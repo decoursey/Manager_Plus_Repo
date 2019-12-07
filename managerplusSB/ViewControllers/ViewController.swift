@@ -8,8 +8,7 @@
 import FSCalendar
 import UIKit
 import AVKit
-import Alamofire
-import SwiftyJSON
+
 /*
 protocol ourFunctions {
     func getTitle(num: Int)
